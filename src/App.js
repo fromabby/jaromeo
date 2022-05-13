@@ -7,13 +7,13 @@ function App() {
     const [database, updateDatabase] = useState([
         {
             studentid: '2000000000',
-            fn: 'abby',
-            mn: '',
-            ln: '',
-            college: '',
-            program: '',
-            year: '',
-            password: '2000000000'
+            fn: 'Juan',
+            mn: 'Mario',
+            ln: 'Dela Cruz',
+            college: 'UST',
+            program: 'IT',
+            year: '2022',
+            password: 'Ju4n!2022'
         }
     ])
     const [page, setPage] = useState('login')

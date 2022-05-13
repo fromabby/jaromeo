@@ -41,7 +41,7 @@ export class Login extends Component {
                 <h1>Login</h1>
                 <form onSubmit={this.submitHandler}>
                     <div className="box">
-                        <input type="text" name="studentid" onChange={this.onChange} placeholder="Student number" required />
+                        <input type="text" name="studentid" onChange={this.onChange} placeholder="Student number" pattern="[0-9]{10}" maxLength={10} required />
                     </div>
                     <div className="box">
                         <input type="password" name="password" onChange={this.onChange} placeholder="password" required />

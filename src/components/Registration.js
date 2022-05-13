@@ -51,7 +51,7 @@ export class Registration extends Component {
                 <h1>Register</h1>
                 <form onSubmit={this.submitHandler}>
                     <div className="box">
-                        <input type="text" name="studentid" onChange={this.onChange} placeholder="Student number" required />
+                        <input type="text" name="studentid" onChange={this.onChange} placeholder="Student number" pattern="[0-9]{10}" maxLength={10} required />
                     </div>
                     <div className="box">
                         <input type="text" name="fn" onChange={this.onChange} placeholder="First name" required />
@@ -72,10 +72,10 @@ export class Registration extends Component {
                         <input type="text" name="year" onChange={this.onChange} placeholder="Year Level" required />
                     </div>
                     <div className="box">
-                        <input type="password" name="password" onChange={this.onChange} placeholder="Password" required />
+                        <input type="password" name="password" onChange={this.onChange} placeholder="Password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" required />
                     </div>
                     <div className="box">
-                        <input type="password" name="cpassword" onChange={this.onChange} placeholder="Confirm password" required />
+                        <input type="password" name="cpassword" onChange={this.onChange} placeholder="Confirm password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" required />
                     </div>
                     <input type="submit" className="btn" value="Register" />
                     <input type="reset" className="btn" value="Cancel" style={{ backgroundColor: 'white', color: 'black' }} />
